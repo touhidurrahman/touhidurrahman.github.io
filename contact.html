@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Touhid's Portfolio</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+
+
+    
+
+  </head>
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i>TOUHID</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="aboutme.html" class="nav-link"><span data-hover="About Me">About Me</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="experiences.html" class="nav-link"><span data-hover="Experiences">Experiences</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="maps.html" class="nav-link"><span data-hover="WebMaps">WebMaps</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTACT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12" style="height: 50px;"></div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <section id="contact">
+            <div class="shadow">
+              <h2 class="text-center">Send Me a Message</h2>
+
+              
+                <div class="form-group col-xs-12">
+                    <label for="name">Name</label>                
+                    <input type="text" name="name" id="name" class="form-control" placeholder="What should I call you?" required>  
+                </div>
+                <div class="col-xs-12" style="height: 5px;"></div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Where I can reach you?" required>
+                </div>
+                <div class="col-xs-12" style="height: 5px;"></div>
+                <div class="form-group">
+                    <label for="email">Message</label>
+                    <textarea name="message" id="message" cols="15" rows="5" class="form-control" placeholder="Your message here!"></textarea>
+                </div>
+                <div>
+                  <button class="form-control btn submit-button" id="send_msg">Submit</button>
+                </div>
+
+              
+              
+
+            
+            </div>
+          </section>
+
+        </div>
+        <div class="col-6">
+          <section id="contact">
+            <div class="shadow">
+              <h2 class="text-center">Reach Me</h2>
+              <p><span class="contact-label">Email:</span> touhidur002@gmail.com</p>
+              <p><span class="contact-label">Cell:</span> +088 01521 253 112</p>
+              <p><span class="contact-label">LinkedIn:</span> <a target="_blank" href="https://www.linkedin.com/in/md-touhidur-rahman/">Md. Touhidur Rahman</a></p>
+              <p><span class="contact-label">Address:</span> Dhaka, Bangladesh</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $("#send_msg").click(function(){
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+
+        if (name == "" || email == "" || message == "") {
+          swal("","Please fill up the Name, Email and Message fields, Thank You!","warning");
+        } else {
+          $.ajax({
+            url:'send_message.php',
+            data:{name:name, email:email, message:message},
+            type:'POST',
+            success:function(response){
+              swal("","Message sent sucessfully. Will reach back to you soon.","success");
+              $("#name").val("");
+              $("#email").val("");
+              $("#message").val("");
+            },
+            error: function(xhr, status, error){
+                
+                swal("Error Occured!",error,"error");
+            }
+          })
+        }
+
+        
+      })
+    </script>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Touhid's Portfolio</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    
+
+  </head>
+
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i>TOUHID</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="aboutme.html" class="nav-link"><span data-hover="About Me">About Me</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="experiences.html" class="nav-link"><span data-hover="Experiences">Experiences</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="maps.html" class="nav-link"><span data-hover="WebMaps">WebMaps</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+               
+            </div>
+        </div>
+    </nav>
+
+    <!-- PROJECTS -->
+    <div class="container">
+
+        <div class="row">
+            <br><br>
+        </div>
+
+      <div class="row">
+        <div class="col-3 project-list">
+          
+              <h4>Projects</h4>
+              <ul>
+                  <li onclick="showProject('project1')">Smart Water Management Tools</li>
+                  <li onclick="showProject('project2')">Data Collection App</li>
+                  <li onclick="showProject('project3')">Leak Detection and Reporting</li>
+                  <li onclick="showProject('project4')">Drone Survey and WebMapping</li>
+                  <!-- Add more projects as needed -->
+              </ul>
+          
+        </div>
+        <div class="col-9 project-description">
+          
+              <h4 id="project-title">Project Title</h4>
+              <p id="project-details">Select a project to view its details.</p>
+          
+        </div>
+      </div>   
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    
+  </body>
+
+<script>
+  // Function to display project details
+  function showProject(project) {
+
+    var projectTitle = '';
+    var projectDetails = '';
+
+    if (project == 'project1') {
+        projectTitle = `
+            <p class="text-center project-title">Smart Water Management Tools (SWMT)</p>
+        `;
+        projectDetails = `
+            <h5 class="activities-title">Overview</h5>
+            <p class="project-text">SWMT is a web-GIS based software designed to revolutionize DMA (District Metered Area) management. With its user-friendly interface and powerful features, SWMT offers a comprehensive solution for efficient and sustainable water distribution. It is the official DMA management software of Dhaka WASA, which is the largest water service provider in Southeast Asia.</p>
+            <h5 class="activities-title">Description</h5>
+            <p class="project-text">SDMT is a web-based software accessible from anywhere in the world via any internet browser, eliminating the need for installations or software downloads. Its intuitive design and robust functionality empower users to optimize DMA management from anywhere, anytime.</p>
+            <p class="project-text">Some of the key features are:</p>
+            <ul class="activities-list tick-list project-text">
+                <li>Users can gain access to comprehensive DMA information from multiple shapefiles, GeoJSON files, APIs, and databases. </li>
+                <li>SWMT enables the users to perform queries on the existing DMA assets (i.e., valves, pipelines, PTW, DMA chambers, service connections, transmission lines, injection points), modify their attributes, change their location, edit the geometry, delete assets, and add new DMA assets.</li>
+                <li>Through server interconnection and API, SWMT fetches billing data from the MIS server of Dhaka WASA and uses this information to calculate NRW and display the billing anomalies on web maps. Besides, it automatically displays the calculated NRW results on separate dashboards. </li>
+            </ul>
+            <div class="gallery">
+              <div class="project-image">
+                <img src="images/procedures.jpg" alt="Image 1">
+              </div>
+              <div class="project-image">
+                <img src="images/versions.jpg" alt="Image 2">
+              </div>
+            </div>
+            <ul class="activities-list tick-list project-text">
+                <li>SWMT has a secure login system. It has two versions, one version is accessible by the general users (we call it Readonly Version), another version is accessible by only authorized persons (Edit Version). In the Readonly Version, users can only view web maps and make queries. On the contrary, in the Edit Version, users can edit the data in real-time.</li>
+                <li>In SWMT, data can be dynamically updated in real-time. Therefore, it contains the up-to-date data of Dhaka WASA. These spatial data can be downloaded directly from SWMT both in GeoJSON format and Excel files. </li>
+            </ul>
+            <br>
+            <div class="iframe-container">
+                <iframe width="700" height="390" src="https://www.youtube.com/embed/jUI7oM5rBjU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br>
+            <ul class="activities-list tick-list project-text">
+                <li>SWMT incorporates a powerful Content Management System (CMS) that empowers admins to create, manage, optimize the customer experience, and handle user management, groups, and tool integration.</li>
+                <li>Different open source data collection software, like- Kobo Toolbox, QField etc. can be used to directly feed data into SWMT. These data can be displayed in the web maps of SWMT in real-time.</li>
+                <li>It can be used by an unlimited number of users. </li>
+            </ul>
+            <br>
+            <h5 class="activities-title">Technologies</h5>
+            <div class="technologies">
+
+                <div class="technology-box php">
+                    <span>PHP</span>
+                </div>
+                <div class="technology-box javascript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="technology-box sql">
+                    <span>SQL</span>
+                </div>
+                <div class="technology-box postgresql">
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="technology-box postgis">
+                    <span>PostGIS</span>
+                </div>
+                <div class="technology-box leaflet">
+                    <span>Leaflet</span>
+                </div>
+                <div class="technology-box turf">
+                    <span>Turf</span>
+                </div>
+
+                <div class="technology-box ajax">
+                    <span>AJAX</span>
+                </div>
+                <div class="technology-box gdal">
+                    <span>GDAL</span>
+                </div>
+                <div class="col-xs-12" style="height: 10px;"></div>
+                <div class="technology-box api">
+                    <span>API</span>
+                </div>
+                <div class="technology-box html">
+                    <span>HTML</span>
+                </div>
+                <div class="technology-box css">
+                    <span>CSS</span>
+                </div>
+                <div class="technology-box python">
+                    <span>Python</span>
+                </div>
+            </div>
+            <br>
+            <h5 class="activities-title">Future Plans</h5>
+            <p class="project-text">The SWMT project is constantly evolving, with future plans aimed at expanding its capabilities and impact. Some envisioned enhancements include:</p>
+            <ul class="activities-list tick-list project-text">
+                <li>Developing a mobile-based version of SDMT for enhanced accessibility.</li>
+                <li>Establishing server connections between SWMT and Water ATMs, ePRV, SCADA, and GSM Data Loggers. Displaying real-time data from these sensor based systems in the web maps of SWMT. </li>
+                <li>Incorporating drone images for better DMA management. </li>
+            </ul>
+            <br>
+            <h5 class="activities-title">My Role</h5>
+            <p class="project-text">In addition to my expertise in water supply management, where I have received valuable insights from the DMA Management Expert, I proudly stand as the sole developer behind the creation of SWMT.</p>
+            <p class="project-text">To know more about the system, feel free to give me a knock at the contact page. </p>
+            <br><br><br>
+            
+
+        `;
+    } else if (project == 'project2') {
+        projectTitle = `
+            <p class="text-center project-title">SWMT Data Collection Application</p>
+        `;
+        projectDetails = `
+            <h5 class="activities-title">Overview</h5>
+            <p class="project-text">This application has been developed as part of SWMT to collect field data. The main aim of this application is to collect bulk-water meter (BWM) readings for NRW calculation. Field people use this application in their android mobile phones to collect data. These data are being directly transmitted to a PostgreSQL server.</p>
+            <h5 class="activities-title">Description</h5>
+            <ul class="activities-list tick-list project-text">
+                <li>Before going to the field, data collectors download account numbers (which is a unique identifier) for Deep Tubewells and DMA Chambers using the application. This data is stored in their mobile phones for offline accessibility.</li>
+                <li>The account numbers appear in a drop-down menu. After selecting one account number, related information for that account appears.</li>
+                <li>Data collectors inspect the meters at field and fill up the current readings and other related information in the app. Then they press the submit button and data is stored in their mobile phones. If it is needed, they can edit their own submitted data.</li>
+            </ul>
+            <div class="gallery">
+              <div class="project-image">
+                <img src="images/mobile_app.jpg" alt="Image 1">
+              </div>
+            </div>
+            <ul class="activities-list tick-list project-text">
+                <li>First, the submitted data is stored locally on their mobiles to reduce internet consumption. After coming to the office, they send the data to the server. </li>
+                <li>After the data is uploaded to the server, supervisors of the data collectors can view the data in their computers and edit it if required. There is a separate dashboard in SWMT to view and edit the field data. </li>
+            </ul>
+            <br>
+            <div class="iframe-container">
+                <iframe width="700" height="390" src="https://www.youtube.com/embed/x1jiQe4AIN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br>
+            <ul class="activities-list tick-list project-text">
+                <li>Surveyors can also take GPS readings. When they upload the readings to PostgreSQL server, these readings are converted into point feature using PostGIS functions. </li>
+                <li>The location and other associated information of point features can be viewed on the web maps of SWMT.</li>
+            </ul>
+            <br>
+            <h5 class="activities-title">Technologies</h5>
+            <div class="technologies">
+
+                <div class="technology-box php">
+                    <span>PHP</span>
+                </div>
+                <div class="technology-box javascript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="technology-box sql">
+                    <span>SQL</span>
+                </div>
+                <div class="technology-box postgresql">
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="technology-box postgis">
+                    <span>PostGIS</span>
+                </div>
+                <div class="technology-box leaflet">
+                    <span>Leaflet</span>
+                </div>
+                
+                <div class="technology-box ajax">
+                    <span>AJAX</span>
+                </div>
+                
+                <div class="technology-box html">
+                    <span>HTML</span>
+                </div>
+                <div class="technology-box css">
+                    <span>CSS</span>
+                </div>
+                
+            </div>
+            <br>
+            <h5 class="activities-title">My Role</h5>
+            <p class="project-text">I wrote all the codes to build this application and train the field people (more than 100) to use it.</p>
+            <p class="project-text">To know more about the system, feel free to give me a knock at the contact page. </p>
+            <br><br><br>
+            
+
+        `;
+
+    } else if (project == 'project4') {
+        projectTitle = `
+            <p class="text-center project-title">Drone Survey and WebMapping</p>
+        `;
+        projectDetails = `
+            <h5 class="activities-title">Overview</h5>
+            <p class="project-text">Images of high spatial resolution can be obtained by carrying out drone surveys. These images can be used for multitude of purposes. Our purpose was to improve the quality of our web mapping base maps, so that different assets (like, valves, pipelines, service connections, etc.) can be located with accurate precision. </p>
+            <h5 class="activities-title">Description</h5>
+            <ul class="activities-list tick-list project-text">
+                <li>DJI Mavic Air 2 drones were used to map a medium chunk of area for piloting purposes. The area and path of the drones were fixed using Map Pilot Pro. </li>
+                <li>The drones were flown at an altitude of 100 meters with 85% overlap. High overlapping help produce more seamless mosaic. </li>
+                <li>As it was a small area, a total of 106 images were captured. After that the images were processed using Pix4D.</li>
+            </ul>
+            <div class="gallery">
+              <div class="project-image">
+                <img src="images/drone_workflow.jpg" alt="Image 1">
+              </div>
+            </div>
+            <ul class="activities-list tick-list project-text">
+                <li>I also tried ArcGIS Pro and WebODM from OpenDroneMap. Nonetheless, I think the processing capacity is better with Pix4D. </li>
+                <li>The result was a seamless mosaic with a spatial resolution of 3.64 cm.
+
+                    <a href="images/dasherkandi.jpg" target="_new">See the Image</a>
+
+                 </li>
+                <li>Later, mosaic was converted into tiles for web mapping. </li>
+                <li>As the piloting was successful, the process will now be used by Dhaka WASA to cover big areas of Dhaka city for asset mapping and monitoring. </li>
+            </ul>
+            <br>
+            <h5 class="activities-title">Technologies</h5>
+            <div class="technologies">
+
+                <div class="technology-box arcgis">
+                    <span>Drone</span>
+                </div>
+                <div class="technology-box sql">
+                    <span>Pix4D</span>
+                </div>
+                <div class="technology-box gdal">
+                    <span>GDAL</span>
+                </div>
+                <div class="technology-box javascript">
+                    <span>JavaScript</span>
+                </div>
+                
+            </div>
+            <br>
+            <h5 class="activities-title">My Role</h5>
+            <p class="project-text">Planned and carried out the drone survey; Processed the images; Convert the images to tiles; Displaying the mosaic in web map</p>
+            <p class="project-text">To know more about the system, feel free to give me a knock at the contact page. </p>
+            <br><br><br>
+            
+
+        `;
+    }
+      
+    // Update project details in the HTML
+    document.getElementById('project-title').innerHTML = projectTitle;
+    document.getElementById('project-details').innerHTML = projectDetails;
+  }
+
+  const projectImages = document.querySelectorAll('.project-image');
+
+  projectImages.forEach((projectImage) => {
+    projectImage.addEventListener('mousemove', (e) => {
+      const image = projectImage.querySelector('img');
+      image.style.left = e.pageX + 'px';
+      image.style.top = e.pageY + 'px';
+    });
+
+    projectImage.addEventListener('mouseleave', () => {
+      const image = projectImage.querySelector('img');
+      image.style.left = '0';
+      image.style.top = '0';
+    });
+  });
+
+</script>
+
+</html>
