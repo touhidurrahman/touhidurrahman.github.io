@@ -127,7 +127,7 @@
           swal("","Please fill up the Name, Email and Message fields, Thank You!","warning");
         } else {
           $.ajax({
-            url:'send_message.php',
+            url:'https://www.dwasacbs.com/touhid/send_message.php',
             data:{name:name, email:email, message:message},
             type:'POST',
             success:function(response){
