@@ -72,8 +72,15 @@
               <ul>
                   <li onclick="showProject('project1')">Smart Water Management Tools</li>
                   <li onclick="showProject('project2')">Data Collection App</li>
-                  <li onclick="showProject('project3')">Leak Detection and Reporting</li>
-                  <li onclick="showProject('project4')">Drone Survey and WebMapping</li>
+                  <li onclick="showProject('project3')">Drone Survey and WebMapping</li>
+                  <li onclick="showProject('project4')">3D Web Mapping with Drones</li>
+                  <li onclick="showProject('project5')">ArcGIS JavaScript API</li>
+                  <li onclick="showProject('project6')">3D Mapping with Web AppBuilder</li>
+                  <li onclick="showProject('project7')">ArcGIS Instant App</li>
+                  <li onclick="showProject('project8')">Water Crisis in Dhaka City (A Story Map)</li>
+                  <li onclick="showProject('project9')">Surveying with Survey123</li>
+                  <li onclick="showProject('project10')">Interactive Mapping with Geopandas and Folium</li>
+                  <li onclick="showProject('project11')">Mapping with Plotly</li>
                   <!-- Add more projects as needed -->
               </ul>
           
@@ -279,7 +286,7 @@
 
         `;
 
-    } else if (project == 'project4') {
+    } else if (project == 'project3') {
         projectTitle = `
             <p class="text-center project-title">Drone Survey and WebMapping</p>
         `;
@@ -330,6 +337,51 @@
             <p class="project-text">Planned and carried out the drone survey; Processed the images; Convert the images to tiles; Displaying the mosaic in web map</p>
             <p class="project-text">To know more about the system, feel free to give me a knock at the contact page. </p>
             <br><br><br>
+            
+
+        `;
+    } else if (project == 'project10') {
+        projectTitle = `
+            <p class="text-center project-title">Interactive WebMap with GeoPandas and Folium</p>
+        `;
+        projectDetails = `
+            <iframe src="interactive_dma_map.html" width="100%" height="700px" frameborder="0"></iframe>
+            <br><br><br>
+            
+
+        `;
+    } else if (project == 'project11') {
+        projectTitle = `
+            <p class="text-center project-title">Geospatial Plotting with Plotly</p>
+        `;
+        projectDetails = `
+            <iframe src="mapping_with_plotly.html" width="100%" height="700px" frameborder="0"></iframe>
+            <br><br><br>
+            
+
+        `;
+    } else if (project == 'project9') {
+        projectTitle = `
+            <p class="text-center project-title">ArcGIS Survey123</p>
+        `;
+        projectDetails = `
+            <p>I have developed this form as a private project using Survey123. This form serves the purpose of gathering information about individuals' pet animals. Through a series of thoughtfully designed questions, respondents can provide insights into their pet ownership experience. The survey encompasses a variety of possible answers. Additionally, participants are offered the option to enhance their responses by uploading images of their beloved pets. </p>
+
+            <p>Open the form in <a target='_blank' href="survey123.html">Full Screen</a></p>
+            <iframe src="https://arcg.is/00mrXT" width="100%" height="700px" frameborder="0"></iframe>
+            <br><br><br>
+            
+
+        `;
+    } else if (project == 'project8') {
+        projectTitle = `
+           <p class="text-center project-title">Water Crisis in Dhaka City (A Story Map)</p>
+        `;
+        projectDetails = `
+            <p>This story map describes the water crisis scenario in Dhaka (capital of Bangladesh), which is one of world’s most densely populated cities. It shows how Dhaka WASA (the government authority bestowed with the responsibility to supply potable water and provide sanitation facilities) is trying to cope with the situation. </p>
+            <p>I strongly suggest to see the story map in full screen from <a target='_blank' href="https://arcg.is/15OTu01">here</a>.</p>
+            <br>
+            <iframe src="https://storymaps.arcgis.com/stories/7c13d668163e487099c16039c4210f87" width="100%" height="800px" frameborder="0" allowfullscreen allow="geolocation"></iframe>
             
 
         `;
