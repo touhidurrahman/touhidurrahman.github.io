@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Touhid's Portfolio</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    
+
+  </head>
+  <body>
+
+    
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.php"><i class='uil uil-user'></i>TOUHID</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="aboutme.html" class="nav-link"><span data-hover="About Me">About Me</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="experiences.html" class="nav-link"><span data-hover="Experiences">Experiences</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="webmaps.html" class="nav-link"><span data-hover="WebMaps">WebMaps</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="maps.html" class="nav-link"><span data-hover="Maps">Maps</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- ABOUT -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 col-md-12 col-12 d-flex justify-content-center">
+                  <div >
+                    <img src="images/undraw/touhid.jpg" class="round-image" alt="svg image">
+                  </div>
+                </div>
+                
+                <div class="col-lg-12 col-md-12 col-12 d-flex justify-content-center">
+                  <div class="about-text text-center">
+                    
+                    <h1 class="animated animated-text">
+                      <span class="mr-2">Hi, I'm Md. Touhidur Rahman</span>
+                      <br>
+                      <div class="animated-info">
+                        <span class="animated-item">GIS Programmer</span>
+                        <span class="animated-item">WebGIS Developer</span>
+                        <span class="animated-item">Geospatial Data Analyst</span>
+                      </div>
+                    </h1>
+                    <p>PostGIS | Leaflet | PHP | JavaScript | Python | SQL | ArcGIS JavaScript API | PostgreSQL</p>
+                  </div>
+                </div>
+
+                <div class="col-xs-12" style="height: 250px;">
+                    
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-12 d-flex justify-content-center">
+                    <a href="aboutme.html"><button  type="button" class="btn btn-outline-secondary btn-lg">Know More</button></a>
+                    
+                </div>
+
+
+                
+
+            </div>
+        </div>
+    </section>
+
+    
+
+   
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+
+  </body>
+</html>
+
+<?php
+
+    $client_ip_address = $_SERVER['REMOTE_ADDR'];
+
+    $data = "Hello from Website 1";
+    $url = "https://www.dwasacbs.com/touhid/send_message1.php";
+
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(['ip_address' => $client_ip_address]));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($ch);
+    curl_close($ch);
+    
+?>
