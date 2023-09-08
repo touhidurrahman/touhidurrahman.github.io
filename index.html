@@ -27,7 +27,7 @@
     <!-- MENU -->
     <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="index.php"><i class='uil uil-user'></i>TOUHID</a>
+            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i>TOUHID</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -120,18 +120,3 @@
 
   </body>
 </html>
-
-<?php
-
-    $client_ip_address = $_SERVER['REMOTE_ADDR'];
-
-    $data = "Hello from Website 1";
-    $url = "https://www.dwasacbs.com/touhid/send_message1.php";
-
-    $ch = curl_init($url);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(['ip_address' => $client_ip_address]));
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $response = curl_exec($ch);
-    curl_close($ch);
-    
-?>
