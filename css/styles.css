@@ -145,6 +145,11 @@
   color: #2980B9;
 }
 
+.tools-used {
+  font-weight: bold;
+  color: black;
+}
+
 .timeline-item {
   font-family: sans-serif;
 }
@@ -304,4 +309,62 @@
   color: #2980B9;
   font-size: 16px;
 }
+
+
+/* Style the slideshow container */
+.slideshow-container {
+    display: flex;
+    align-items: center;
+    height: 80vh; /* Adjust the height percentage as needed */
+}
+
+/* Style the image section */
+.image-section {
+    flex: 3;
+    overflow: hidden;
+    height: 90%;
+    width: 100%;
+}
+
+.mySlides {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+/* Style the text section */
+.text-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #f2f2f2;
+    width: 100%; 
+    overflow: auto; 
+}
+
+/* Style the text content */
+.slide-text {
+    font-size: 18px;
+    max-height: 100%;
+}
+
+/* Style the navigation buttons */
+.prev, .next {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    float: left;
+}
+
+.next {
+    float: right;
+}
+
+
+
+
 
