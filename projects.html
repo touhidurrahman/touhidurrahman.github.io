@@ -84,6 +84,7 @@
                   <li onclick="showProject('project9')">Surveying with Survey123</li>
                   <li onclick="showProject('project10')">Interactive Mapping with Geopandas and Folium</li>
                   <li onclick="showProject('project11')">Mapping with Plotly</li>
+                  <li onclick="showProject('project12')">Feature Manipulation Engine</li>
                   <!-- Add more projects as needed -->
               </ul>
           
@@ -441,6 +442,43 @@
             <p>I strongly suggest to see the 3D models in full screen from <a target='_blank' href="https://www.dwasacbs.com/touhid/3d.php">here</a>.</p>
            
             <iframe src="https://www.dwasacbs.com/touhid/3d.php" width="100%" height="800px" frameborder="0" allowfullscreen allow="geolocation"></iframe>
+            
+
+        `;
+    } else if (project == 'project12') {
+        projectTitle = `
+           <p class="text-center project-title">Data Extraction and Map Preparation via FME</p>
+        `;
+        projectDetails = `
+            <p>FME (Feature Manipulation Engine) is a versatile data integration and transformation tool, widely used in GIS and ETL workflows, known for its ability to convert, filter, and manipulate data from various sources and formats with ease.</p>
+            <p>Here I am fetching data from the earthquake related API of United States Geological Survey (USGS) via FME. The data is in GeoJSON format. My aim is to determine the country wise earthquake frequency for the period of 2020 to 2023, and for 2017 to 2020. And finally, made a visual comparison. After performing the analysis, I am storing all the data in my PostGIS database. </p>
+           
+            <div class="gallery">
+              <div class="project-image">
+                <img src="images/fme.png" alt="Feature Manipulation Engine Workflow">
+              </div>
+            </div>
+            <br>
+            <div class="iframe-container">
+                <iframe width="700" height="390" src="https://www.youtube.com/embed/gRc9NlAIK_4?si=VMifu_IWbQIWgeev" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br>
+            <h5 class="activities-title">Technologies</h5>
+            <div class="technologies">
+
+                <div class="technology-box php">
+                    <span>Feature Manipulation Engine (FME)</span>
+                </div>
+                <div class="technology-box javascript">
+                    <span>ETL</span>
+                </div>
+                <div class="technology-box sql">
+                    <span>API</span>
+                </div>
+            </div>
+            <br><br></br>
+
+
             
 
         `;
