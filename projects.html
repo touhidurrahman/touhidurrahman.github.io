@@ -77,6 +77,7 @@
                   <li onclick="showProject('project2')">Data Collection App</li>
                   <li onclick="showProject('project3')">Drone Survey and WebMapping</li>
                   <li onclick="showProject('project4')">3D Web Mapping with Drones</li>
+                  <li onclick="showProject('project13')">Automating Flood Vulnerability Analysis with ArcPy</li>
                   <li onclick="showProject('project5')">ArcGIS JavaScript API</li>
                   <li onclick="showProject('project6')">3D Mapping with Web AppBuilder</li>
                   <li onclick="showProject('project7')">ArcGIS Instant App</li>
@@ -474,6 +475,39 @@
                 </div>
                 <div class="technology-box sql">
                     <span>API</span>
+                </div>
+            </div>
+            <br><br></br>
+
+
+            
+
+        `;
+    } else if (project == 'project13') {
+        projectTitle = `
+           <p class="text-center project-title">Automating Flood Vulnerability Analysis with ArcPy</p>
+        `;
+        projectDetails = `
+            <p>Imagine doing the same geospatial analysis for 100 land parcels. Repeating the same task not only consumes time but also risks costly errors.</p>
+            <p>The solution? Use ArcPy: a Python library for automating and customizing geoprocessing tasks. Any spatial analysis in ArcGIS can be automated with ArcPy. In the video attached, I demonstrate how to automate flood vulnerability analysis using ArcPy. You can adapt the script for your specific area by adjusting input files, paths, and values. </p>
+            <p>Get the full code from my GitHub <a target='_blank' href="https://github.com/touhidurrahman/arcpy_flood_analysis">repository</a></p>
+            <br>
+
+            <div class="iframe-container">
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/RiBhSvVwUUA?si=rDQBC4OzgbiODOxt" title="Automating Flood Vulnerability Analysis with ArcPy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br>
+            <h5 class="activities-title">Technologies</h5>
+            <div class="technologies">
+
+                <div class="technology-box ajax">
+                    <span>ArcPy</span>
+                </div>
+                <div class="technology-box leaflet">
+                    <span>Rasterio</span>
+                </div>
+                <div class="technology-box sql">
+                    <span>VS Code</span>
                 </div>
             </div>
             <br><br></br>
