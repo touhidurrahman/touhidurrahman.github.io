@@ -78,6 +78,7 @@
                   <li onclick="showProject('project3')">Drone Survey and WebMapping</li>
                   <li onclick="showProject('project4')">3D Web Mapping with Drones</li>
                   <li onclick="showProject('project13')">Automating Flood Vulnerability Analysis with ArcPy</li>
+                  <li onclick="showProject('project14')">Landfill Site Selection with ArcPy and GEE</li>
                   <li onclick="showProject('project5')">ArcGIS JavaScript API</li>
                   <li onclick="showProject('project6')">3D Mapping with Web AppBuilder</li>
                   <li onclick="showProject('project7')">ArcGIS Instant App</li>
@@ -508,6 +509,51 @@
                 </div>
                 <div class="technology-box sql">
                     <span>VS Code</span>
+                </div>
+            </div>
+            <br><br></br>
+
+
+            
+
+        `;
+    } else if (project == 'project14') {
+        projectTitle = `
+           <p class="text-center project-title">Landfill (waste disposal) Site Selection with ArcPy and Google Earth Engine's Python API</p>
+        `;
+        projectDetails = `
+            <p>One common problem everyone faces when replicating a suitability model to another area is the lack of data or the expertise to process the required satellite imagery. </p>
+            <p>The solution? Use ArcPy and Google Earth Engine together.</p>
+            <p>This model aims to find suitable sites for landfill (waste disposal). All you need to do is to provide a shapefile of your study area and the road network of that area. This model will do the rest of the data collection for you.</p>
+            <p>It is using GEE to extract NDVI from Landsat 9, Buildings from Google’s Open Building database, DEMs from SRTM, and Bare Land from the study of Demattê, José AM, et al. (2020).</p>
+            <p>After you have authenticated your GEE, the model will collect the data, sync it to your Google Drive and Local System, and will use the synced satellite imagery for the rest of the calculations. </p>
+            <p>Get the full code from my GitHub <a target='_blank' href="https://github.com/touhidurrahman/landfill_suitability_model">repository</a></p>
+            <br>
+
+            <div class="iframe-container">
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/B6PcKJNXeKo?si=YYNyffK2Bf-JdSeT" title="Automating Flood Vulnerability Analysis with ArcPy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br>
+            <h5 class="activities-title">Technologies</h5>
+            <div class="technologies">
+
+                <div class="technology-box ajax">
+                    <span>ArcPy</span>
+                </div>
+                <div class="technology-box leaflet">
+                    <span>Rasterio</span>
+                </div>
+                <div class="technology-box sql">
+                    <span>VS Code</span>
+                </div>
+                <div class="technology-box php">
+                    <span>Google Earth Engine</span>
+                </div>
+                <div class="technology-box postgis">
+                    <span>Geemap</span>
+                </div>
+                <div class="technology-box python">
+                    <span>Folium</span>
                 </div>
             </div>
             <br><br></br>
