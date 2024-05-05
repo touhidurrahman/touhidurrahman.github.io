@@ -46,17 +46,16 @@
                         <a href="projects.html" class="nav-link"><span data-hover="Projects">Projects</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="webmaps.html" class="nav-link"><span data-hover="WebMaps">WebMaps</span></a>
+                        <a href="gis_programming.html" class="nav-link"><span data-hover="Code imagination">GIS Programming</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="maps.html" class="nav-link"><span data-hover="Maps">Maps</span></a>
+                        <a href="webgis.html" class="nav-link"><span data-hover="WebGIS">WebGIS</span></a>
                     </li>
+                    
                     <li class="nav-item">
                         <a href="contact.html" class="nav-link"><span data-hover="Contact">Contact</span></a>
                     </li>
                 </ul>
-
-               
             </div>
         </div>
     </nav>
@@ -75,18 +74,16 @@
               <ul>
                   <li onclick="showProject('project1')">Smart Water Management Tools</li>
                   <li onclick="showProject('project2')">Data Collection App</li>
-                  <li onclick="showProject('project3')">Drone Survey and WebMapping</li>
-                  <li onclick="showProject('project4')">3D Web Mapping with Drones</li>
+                  <li onclick="showProject('project3')">Drone Survey and WebGIS</li>
+                  <li onclick="showProject('project4')">Visualizing and Sharing 3D Web Maps</li>
                   <li onclick="showProject('project13')">Automating Flood Vulnerability Analysis with ArcPy</li>
                   <li onclick="showProject('project14')">Landfill Site Selection with ArcPy and GEE</li>
                   <li onclick="showProject('project5')">ArcGIS JavaScript API</li>
                   <li onclick="showProject('project6')">3D Mapping with Web AppBuilder</li>
-                  <li onclick="showProject('project7')">ArcGIS Instant App</li>
-                  <li onclick="showProject('project8')">Water Crisis in Dhaka City (A Story Map)</li>
-                  <li onclick="showProject('project9')">Surveying with Survey123</li>
                   <li onclick="showProject('project10')">Interactive Mapping with Geopandas and Folium</li>
                   <li onclick="showProject('project11')">Mapping with Plotly</li>
                   <li onclick="showProject('project12')">Feature Manipulation Engine</li>
+                  <li onclick="showProject('project7')">Interactive WebMap of Palestine</li>
                   <!-- Add more projects as needed -->
               </ul>
           
@@ -294,32 +291,28 @@
 
     } else if (project == 'project3') {
         projectTitle = `
-            <p class="text-center project-title">Drone Survey and WebMapping</p>
+            <p class="text-center project-title">Drone Survey and WebGIS</p>
         `;
         projectDetails = `
             <h5 class="activities-title">Overview</h5>
-            <p class="project-text">Images of high spatial resolution can be obtained by carrying out drone surveys. These images can be used for multitude of purposes. Our purpose was to improve the quality of our web mapping base maps, so that different assets (like, valves, pipelines, service connections, etc.) can be located with accurate precision. </p>
+            <p class="project-text">Images of high spatial resolution can be obtained by carrying out drone surveys. These images can be used for multitude of purposes. My purpose was to improve the quality of the base maps, so that different assets (like, valves, pipelines, service connections, etc.) can be located with accurate precision in the webgis portal. </p>
             <h5 class="activities-title">Description</h5>
             <ul class="activities-list tick-list project-text">
-                <li>DJI Mavic Air 2 drones were used to map a medium chunk of area for piloting purposes. The area and path of the drones were fixed using Map Pilot Pro. </li>
-                <li>The drones were flown at an altitude of 100 meters with 85% overlap. High overlapping help produce more seamless mosaic. </li>
-                <li>As it was a small area, a total of 106 images were captured. After that the images were processed using Pix4D.</li>
+                <li>People often use Google Satellite imagery. Basically, Google uses tiles to load the images very rapidly.</li>
+                <li>This can also be achieved with drone imagery using GDAL. The final mosaicked image from drone mapping can be divided into multiple zoom resolutions having thousands of tiles.</li>
+                <li>Finally, these tiles can be included in the WebGIS system for better user experience, similar to what I have done here (see the video).</li>
+                <li>You can use GeoServer to host your tiles or free services like WSRV (https://images.weserv.nl/), which is an image caching server that manipulates the images on-the-fly.</li>
             </ul>
             <div class="gallery">
               <div class="project-image">
                 <img src="images/drone_workflow.jpg" alt="Image 1">
               </div>
             </div>
-            <ul class="activities-list tick-list project-text">
-                <li>I also tried ArcGIS Pro and WebODM from OpenDroneMap. Nonetheless, I think the processing capacity is better with Pix4D. </li>
-                <li>The result was a seamless mosaic with a spatial resolution of 3.64 cm.
 
-                    <a href="images/dasherkandi.jpg" target="_new">See the Image</a>
-
-                 </li>
-                <li>Later, mosaic was converted into tiles for web mapping. </li>
-                <li>As the piloting was successful, the process will now be used by Dhaka WASA to cover big areas of Dhaka city for asset mapping and monitoring. </li>
-            </ul>
+            <div class="iframe-container">
+                <iframe width="700" height="390" src="https://www.youtube.com/embed/0EMe-40MInQ?si=EP1tYbsFdCA_BQFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            
             <br>
             <h5 class="activities-title">Technologies</h5>
             <div class="technologies">
@@ -328,21 +321,17 @@
                     <span>Drone</span>
                 </div>
                 <div class="technology-box sql">
-                    <span>Pix4D</span>
-                </div>
-                <div class="technology-box gdal">
                     <span>GDAL</span>
                 </div>
+                <div class="technology-box gdal">
+                    <span>Image Caching</span>
+                </div>
                 <div class="technology-box javascript">
-                    <span>JavaScript</span>
+                    <span>Pix4D</span>
                 </div>
                 
             </div>
             <br>
-            <h5 class="activities-title">My Role</h5>
-            <p class="project-text">Planned and carried out the drone survey; Processed the images; Convert the images to tiles; Displaying the mosaic in web map</p>
-            <p class="project-text">To know more about the system, feel free to give me a knock at the contact page. </p>
-            <br><br><br>
             
 
         `;
@@ -366,31 +355,6 @@
             
 
         `;
-    } else if (project == 'project9') {
-        projectTitle = `
-            <p class="text-center project-title">ArcGIS Survey123</p>
-        `;
-        projectDetails = `
-            <p>I have developed this form as a private project using Survey123. This form serves the purpose of gathering information about individuals' pet animals. Through a series of thoughtfully designed questions, respondents can provide insights into their pet ownership experience. The survey encompasses a variety of possible answers. Additionally, participants are offered the option to enhance their responses by uploading images of their beloved pets. </p>
-
-            <p>Open the form in <a target='_blank' href="survey123.html">Full Screen</a></p>
-            <iframe src="https://arcg.is/00mrXT" width="100%" height="700px" frameborder="0"></iframe>
-            <br><br><br>
-            
-
-        `;
-    } else if (project == 'project8') {
-        projectTitle = `
-           <p class="text-center project-title">Water Crisis in Dhaka City (A Story Map)</p>
-        `;
-        projectDetails = `
-            <p>This story map describes the water crisis scenario in Dhaka (capital of Bangladesh), which is one of world’s most densely populated cities. It shows how Dhaka WASA (the government authority bestowed with the responsibility to supply potable water and provide sanitation facilities) is trying to cope with the situation. </p>
-            <p>I strongly suggest to see the story map in full screen from <a target='_blank' href="https://arcg.is/15OTu01">here</a>.</p>
-            <br>
-            <iframe src="https://storymaps.arcgis.com/stories/7c13d668163e487099c16039c4210f87" width="100%" height="800px" frameborder="0" allowfullscreen allow="geolocation"></iframe>
-            
-
-        `;
     } else if (project == 'project5') {
         projectTitle = `
            <p class="text-center project-title">Interactive WebMap with ArcGIS JavaScript API</p>
@@ -409,27 +373,14 @@
            <p class="text-center project-title">3D Mapping with ArcGIS Web AppBuilder</p>
         `;
         projectDetails = `
-            <p>There are two layers for the buildings (3D polygons). The active layer shows the population distribution in the buildings through color gradient. And another layer (inactive one) shows the average billed amount for each building for the last two years. You can make the tick mark on to see this layer. Other District Metered Area (DMA) assets like- valves, pipelines, chambers, deep tube wells, consumer connections etc. are in 3D too. You may zoom in and click on any layer to see its attributes. If the attributes are not showing, try after turning off the ‘Zone 2 boundary’ layer.
+            <p>ArcGIS Web AppBuilder is a good hands-on tool to create stunning 3D web maps. A good approach is to create the 3D models in ArcGIS Pro and then transfer those to ArcGIS Online (AGOL) for integrating into Web AppBuilder.
             </p>
-            <p>You can also play with the shadow tool or try different base maps from the ‘Basemap Gallery’. These options are available in the ribbon located in upper-right corner. </p>
-
-            <p>I strongly suggest to see the web map in full screen from <a target='_blank' href="https://arcg.is/01q0uj">here</a>.</p>
-           
-            <iframe src="https://arcg.is/01q0uj" width="100%" height="800px" frameborder="0" allowfullscreen allow="geolocation"></iframe>
-            
-
-        `;
-    } else if (project == 'project7') {
-        projectTitle = `
-           <p class="text-center project-title">ArcGIS Instant App</p>
-        `;
-        projectDetails = `
-            <p>ArcGIS Instant App is a next-generation configurable web mapping app that allows you to share your maps as apps and provide your audience with an intuitive and focused experience to engage with your maps and data. In this Instant App, I have showed the assets of a DMA. From the layer tab, you can change the visibility status of any layer. You can toggle the basemap as well. Further, using the geocoding service of Esri, you can search for any location in the search tab.
-            </p>
-
-            <p>I strongly suggest to see the web map in full screen from <a target='_blank' href="https://vei5a3e61c0320f1.maps.arcgis.com/apps/instant/media/index.html?appid=0150efe6b0704a058ec6322aac1cc0ad">here</a>.</p>
-           
-            <iframe src="https://vei5a3e61c0320f1.maps.arcgis.com/apps/instant/media/index.html?appid=0150efe6b0704a058ec6322aac1cc0ad" width="100%" height="800px" frameborder="0" allowfullscreen allow="geolocation"></iframe>
+            <p>Using Web AppBuilder, I have created this 3D map for a District Metered Area (DMA).
+                It showcases various DMA assets such as valves, pipelines, chambers, deep tube wells, and consumer connections in stunning 3D detail. You can also enhance your experience by experimenting with the shadow tool and selecting different base maps from the 'Basemap Gallery'.</p>
+            <br>
+            <div class="iframe-container">
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/jgXjSK_wZi0?si=fPVlhnWM6f1PY66I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
             
 
         `;
@@ -438,12 +389,15 @@
            <p class="text-center project-title">3D Web Mapping with Drones</p>
         `;
         projectDetails = `
-            <p>I captured images of my study area using a Mavic Air 2 drone. I then used Pix4D to mosaic those images and create an .obj file. After that, I converted the .obj file to a .gltf file which has some benefits over .obj files such as being more efficient and supporting animations. </p>
-            <p>To load the 3D models, I am using the Three.js library. I keep the .gltf files in a folder on my server and store the file names in my database. This allows me to create a dropdown list where you can select a model name and hit the load button to display the 3D model on the screen.</p>
+            <p>After capturing images of my study area using a Mavic Air 2 drone, I have used Pix4D to mosaic those images and create an .obj file. After that, I have converted the .obj file to a .gltf file which has some benefits over .obj files such as being more efficient and supporting animations. </p>
+            <p>However, creating the 3D maps is a simple process. The real challenge is to display and share these 3D maps with all the users.</p>
+            <p>To do so, I am using the Three.js library. I have kept the .gltf files in a folder on my server and stored the file names in my database. This allows me to create a dropdown list where an user can select a model name and hit the load button to display the 3D map on the screen.</p>
 
             <p>I strongly suggest to see the 3D models in full screen from <a target='_blank' href="https://www.dwasacbs.com/touhid/3d.php">here</a>.</p>
            
-            <iframe src="https://www.dwasacbs.com/touhid/3d.php" width="100%" height="800px" frameborder="0" allowfullscreen allow="geolocation"></iframe>
+            <div class="iframe-container">
+                <iframe width="700" height="390" src="https://www.youtube.com/embed/rA0uYkqvLFM?si=PrmI44X8G66xpVQP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
             
 
         `;
@@ -554,6 +508,54 @@
                 </div>
                 <div class="technology-box python">
                     <span>Folium</span>
+                </div>
+            </div>
+            <br><br></br>
+
+
+            
+
+        `;
+    } else if (project == 'project7') {
+        projectTitle = `
+           <p class="text-center project-title">Interactive WebMap of Palestine</p>
+        `;
+        projectDetails = `
+            <p>I've created an interactive webmap designed to shed light on the atrocities of apartheid Israel. The ongoing genocide in Palestine cannot remain unmapped.</p>
+            <p>While searching for a detailed interactive map of the State of Palestine, I couldn't find a satisfactory one. Hence, I took it upon myself to develop one. </p>
+            <p>To access the web map, please visit: https:dwasacbs.com/palestine </p>
+            <p>The data utilized for this web map has been sourced from ACLED, OCHA, Reuters, and Al_Jazeera. </p>
+            <p>I'm committed to keeping this map regularly updated. Currently, I'm in the process of integrating the API from ACLED, ensuring this web map automatically receives the latest conflict data.</p>
+            <p>If you have access to additional data sources not currently featured in this web map, please share them with me.</p>
+            <br>
+
+            <div class="iframe-container">
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/SVb2SXbYZbE?si=ZxX2XuLjq3iAFHet" title="Automating Flood Vulnerability Analysis with ArcPy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br>
+            <h5 class="activities-title">Technologies</h5>
+            <div class="technologies">
+
+                <div class="technology-box ajax">
+                    <span>Leaflet</span>
+                </div>
+                <div class="technology-box leaflet">
+                    <span>PostGIS</span>
+                </div>
+                <div class="technology-box sql">
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="technology-box php">
+                    <span>PHP</span>
+                </div>
+                <div class="technology-box postgis">
+                    <span>Python</span>
+                </div>
+                <div class="technology-box python">
+                    <span>JavaScript</span>
+                </div>
+                <div class="technology-box qgis">
+                    <span>AJAX</span>
                 </div>
             </div>
             <br><br></br>

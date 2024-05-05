@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Touhid's Portfolio</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+    
+
+  </head>
+
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i>TOUHID</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="aboutme.html" class="nav-link"><span data-hover="About Me">About Me</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="experiences.html" class="nav-link"><span data-hover="Experiences">Experiences</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="projects.html" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gis_programming.html" class="nav-link"><span data-hover="Code imagination">GIS Programming</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="webgis.html" class="nav-link"><span data-hover="WebGIS">WebGIS</span></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PROJECTS -->
+    <div class="container">
+
+        <div class="row">
+            <br><br>
+        </div>
+
+      <div class="row">
+        <div class="col-3 project-list">
+          
+            <h4>Tools</h4>
+            <ul>
+              <li onclick="showProject('project3')">Structured Mesh Generation</li>
+              <li onclick="showProject('project4')">Redistributing Polygon Vertices</li>
+              <li onclick="showProject('project1')">Export Maps as PNG</li>
+              <li onclick="showProject('project2')">Modifying Raster Data using Shapefile</li>
+              <li onclick="showProject('project5')">Select by Location on Raster Data</li>
+
+              <!-- Add more projects as needed -->
+            </ul>
+          
+        </div>
+        <div class="col-9 project-description">
+          
+              <h4 id="project-title">Tool Description and Code</h4>
+              <p id="project-details">Select a tool to view its details.</p>
+          
+        </div>
+      </div>   
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    
+  </body>
+
+<script>
+  // Function to display project details
+  function showProject(project) {
+
+    var projectTitle = '';
+    var projectDetails = '';
+
+
+    if (project == 'project1') {
+        projectTitle = `
+            <p class="text-center project-title">Exporting Shapefile Attributes as PNG Files</p>
+        `;
+        projectDetails = `
+            <iframe src="projects/maps_to_png.html" width="100%" height="700px" frameborder="0"></iframe>
+            <br><br><br>
+            
+
+        `;
+    } else if (project == 'project2') {
+        projectTitle = `
+            <p class="text-center project-title">Modifying Raster Data using Shapefile</p>
+        `;
+        projectDetails = `
+            <iframe src="projects/modifying_raster.html" width="100%" height="700px" frameborder="0"></iframe>
+            <br><br><br>
+            
+
+        `;
+    } else if (project == 'project3') {
+        projectTitle = `
+            <p class="text-center project-title">Structured Mesh Generation</p>
+        `;
+        projectDetails = `
+            <iframe src="projects/mesh_generation.html" width="100%" height="700px" frameborder="0"></iframe>
+            <br><br><br>
+            
+
+        `;
+    } else if (project == 'project4') {
+        projectTitle = `
+            <p class="text-center project-title">Redistributing Polygon Vertices</p>
+        `;
+        projectDetails = `
+            <iframe src="projects/redistributing_vertices.html" width="100%" height="700px" frameborder="0"></iframe>
+            <br><br><br>
+            
+
+        `;
+    } else if (project == 'project5') {
+        projectTitle = `
+            <p class="text-center project-title">Select by Location on Raster Data</p>
+        `;
+        projectDetails = `
+            <iframe src="projects/select_raster.html" width="100%" height="700px" frameborder="0"></iframe>
+            <br><br><br>
+        `;
+
+    }
+      
+    // Update project details in the HTML
+    document.getElementById('project-title').innerHTML = projectTitle;
+    document.getElementById('project-details').innerHTML = projectDetails;
+  }
+
+  const projectImages = document.querySelectorAll('.project-image');
+
+  projectImages.forEach((projectImage) => {
+    projectImage.addEventListener('mousemove', (e) => {
+      const image = projectImage.querySelector('img');
+      image.style.left = e.pageX + 'px';
+      image.style.top = e.pageY + 'px';
+    });
+
+    projectImage.addEventListener('mouseleave', () => {
+      const image = projectImage.querySelector('img');
+      image.style.left = '0';
+      image.style.top = '0';
+    });
+  });
+
+</script>
+
+</html>
